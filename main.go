@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/ClaraSmyth/go-algos/search"
+	"github.com/ClaraSmyth/go-algos/sort"
 )
 
 func main() {
@@ -11,4 +12,7 @@ func main() {
 	fmt.Printf("LinearSearch: %v \n", search.TestLinearSearch())
 	fmt.Printf("BinarySearch: %v \n", search.TestBinarySearch())
 	fmt.Printf("TwoCrystalBalls: %v \n", search.TestTwoCrystalBalls())
+
+	// Sort Tests
+	fmt.Printf("BubbleSort: %v \n", sort.TestBubbleSort())
 }
