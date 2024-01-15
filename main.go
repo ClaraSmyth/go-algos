@@ -16,4 +16,5 @@ func main() {
 	// Sort Tests
 	fmt.Printf("BubbleSort: %v \n", sort.TestBubbleSort())
 	fmt.Printf("Queue: %v \n", sort.TestQueue())
+	fmt.Printf("Stack: %v \n", sort.TestStack())
 }
