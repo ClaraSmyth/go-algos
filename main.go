@@ -16,6 +16,7 @@ func main() {
 
 	// Sort Tests
 	fmt.Printf("BubbleSort: %v \n", sort.TestBubbleSort())
+	fmt.Printf("QuickSort %v \n", sort.TestQuickSort())
 
 	// List Tests
 	fmt.Printf("Queue: %v \n", list.TestQueue())
