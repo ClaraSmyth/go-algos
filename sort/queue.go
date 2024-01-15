@@ -1,22 +1,22 @@
 package sort
 
-type Node[T any] struct {
+type QNode[T any] struct {
 	value T
-	next  *Node[T]
+	next  *QNode[T]
 }
 
 type Queue[T any] struct {
-	head, tail *Node[T]
+	head, tail *QNode[T]
 	length     int
 }
 
 func (q *Queue[T]) enqueue(val T) {
 	q.length += 1
 	if q.tail == nil {
-		q.head = &Node[T]{value: val}
+		q.head = &QNode[T]{value: val}
 		q.tail = q.head
 	} else {
-		q.tail.next = &Node[T]{value: val}
+		q.tail.next = &QNode[T]{value: val}
 		q.tail = q.tail.next
 	}
 }
@@ -34,8 +34,13 @@ func (q *Queue[T]) dequeue() (T, bool) {
 	return currentHead.value, true
 }
 
-func (q *Queue[T]) peek() T {
-	return q.head.value
+func (q *Queue[T]) peek() (T, bool) {
+	if q.head == nil {
+		var v T
+		return v, false
+	}
+
+	return q.head.value, true
 }
 
 func TestQueue() string {
@@ -45,7 +50,7 @@ func TestQueue() string {
 	q.enqueue(2)
 	q.enqueue(3)
 
-	test1 := q.peek()
+	test1, _ := q.peek()
 	test2 := q.length
 	test3, _ := q.dequeue()
 	test4 := q.length
