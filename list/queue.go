@@ -1,4 +1,4 @@
-package sort
+package list
 
 type QNode[T any] struct {
 	value T

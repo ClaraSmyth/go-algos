@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/ClaraSmyth/go-algos/list"
 	"github.com/ClaraSmyth/go-algos/search"
 	"github.com/ClaraSmyth/go-algos/sort"
 )
@@ -15,6 +16,8 @@ func main() {
 
 	// Sort Tests
 	fmt.Printf("BubbleSort: %v \n", sort.TestBubbleSort())
-	fmt.Printf("Queue: %v \n", sort.TestQueue())
-	fmt.Printf("Stack: %v \n", sort.TestStack())
+
+	// List Tests
+	fmt.Printf("Queue: %v \n", list.TestQueue())
+	fmt.Printf("Stack: %v \n", list.TestStack())
 }

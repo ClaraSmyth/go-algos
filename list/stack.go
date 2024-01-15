@@ -1,4 +1,4 @@
-package sort
+package list
 
 type SNode[T any] struct {
 	value T
