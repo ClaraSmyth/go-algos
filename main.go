@@ -21,4 +21,5 @@ func main() {
 	// List Tests
 	fmt.Printf("Queue: %v \n", list.TestQueue())
 	fmt.Printf("Stack: %v \n", list.TestStack())
+	fmt.Printf("LinkedList: %v \n", list.TestLinkedList())
 }
